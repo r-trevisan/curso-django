@@ -1,7 +1,7 @@
 # Curso-django
 Código desenvolvido no módulo de Django do Site Python Pro
 
-
+Aplicação disponível em https://djangocursopythonpro.herokuapp.com.br
 
 
 [![Updates](https://pyup.io/repos/github/r-trevisan/curso-django/shield.svg)](https://pyup.io/repos/github/r-trevisan/curso-django/)
