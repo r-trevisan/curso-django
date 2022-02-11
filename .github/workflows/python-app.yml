@@ -36,6 +36,10 @@ jobs:
         pip install pipenv
         pipenv sync --dev
         cp contrib/env-sample .env
+    - name: before_script?
+    - run: |
+        psql -c "CREATE DATABASE testdb;" -U postgre
+
     - name: Lint with flake8
       run: |
         pipenv run flake8 .
