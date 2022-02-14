@@ -5,4 +5,5 @@ from django.shortcuts import render # noqa
 
 
 def home(request):
-    return HttpResponse('Olá Django!!')
+    raise ValueError()
+    return HttpResponse('<html><body>Olá Django!!</body></html>', content_type='text/html')
