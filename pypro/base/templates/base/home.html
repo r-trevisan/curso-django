@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Django Pro</title>
+
+    <meta name="description" content="Página do Módulo Django no Bootcamp Backend DevPro">
+    <meta name="author" content="Rafael Trevisan">
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'base:home' %}">Django Pro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+  </div>
+</nav>
+
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="jumbotron">
+				<h2>
+					Curso Django com Renzo Nuccitelli!
+				</h2>
+				<p>
+					Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Interagi no mé, cursus quis, vehicula ac nisi.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<h5 class="card-header">
+					Detalhes do Autor.
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						<img src="{% static 'img/mussumdivulgacao.jpg' %}" alt="..."
+							 class="img-thumbnail float-left mr-3"/>
+						Antônio Carlos Bernardes Gomes, mais conhecido pelo nome artístico Mussum (Rio de Janeiro, 7 de abril de 1941 — São Paulo, 29 de julho de 1994),
+						foi um humorista, ator, músico, cantor e compositor brasileiro.
+						Na indústria musical, integrou o grupo de samba Os Originais do Samba em meados da década de 1960, como cantor e
+						percussionista com os nomes artísticos de Carlinhos da Mangueira ou Carlinhos Reco-Reco.
+						Como humorista, fez parte do célebre quarteto Os Trapalhões, tendo sido o 3° mais antigo integrante da trupe, e o segundo a falecer (quatro anos depois do Zacarias).
+					</p>
+				</div>
+				<div class="card-footer">
+					Card footer
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <footer class="main-footer mt-5 pt-4 ">
+	  <div class="container">
+		  <div class="row">
+		  	<div class="col">
+				<h3>Entre em Contato</h3>
+				<address>
+					+55 11 2222-3333
+					<br/>
+					<a href="mailto:mussum@django.com.br">mussum@django.com.br</a>
+				</address>
+
+		  	</div>
+		  </div>
+	  </div>
+	  <div class="rights pb-1">
+
+
+	  <div class="container">
+		  <div class="row">
+		  	<div class="col">
+				{% now 'Y' %} Django Pro. Todis direits reservadis.
+		  	</div>
+		  </div>
+	  </div>
+	  </div>
+  </footer>
+
+  </body>
+</html>
