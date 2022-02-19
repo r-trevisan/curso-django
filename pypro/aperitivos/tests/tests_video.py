@@ -13,8 +13,8 @@ def test_status_code(resp):
     assert resp.status_code == 200
 
 
-def test_title_video(resp):
-    assert_contains(resp, '<h1 class="mt-4 mb-3">Video Aperitivo: Motivacao</h1>')
+def test_titulo_video(resp):
+    assert_contains(resp, 'Video Aperitivo: Motivação')
 
 
 def test_conteudo_video(resp):
