@@ -16,13 +16,13 @@ def resp(client, modulo):
     return resp
 
 
-def test_titulo(resp, modulo:Modulo):
+def test_titulo(resp, modulo: Modulo):
     assert_contains(resp, modulo.titulo)
 
 
-def test_descricao(resp, modulo:Modulo):
+def test_descricao(resp, modulo: Modulo):
     assert_contains(resp, modulo.descricao)
 
 
-def test_publico(resp, modulo:Modulo):
+def test_publico(resp, modulo: Modulo):
     assert_contains(resp, modulo.publico)
