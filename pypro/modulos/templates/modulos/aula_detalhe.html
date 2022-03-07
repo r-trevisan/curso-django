@@ -3,12 +3,20 @@
 {% block title %}Django Pro - Aperitivo{% endblock title %}
 {% block description %}Página com Vídeo Gratuito de Python{% endblock description%}
 {% block body %}
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-            <h1 class="mt-4 mb-3">{{ aula.titulo | default:"Faltando Título"}}</h1>
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ aula.youtube_id }}"></iframe>
+
+	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="#">Home</a></li>
+		<li class="breadcrumb-item"><a href="{{aula.modulo.get_absolute_url}}">{{aula.modulo.titulo}}</a></li>
+		<li class="breadcrumb-item active" aria-current="page">{{aula.titulo}}</li>
+	  </ol>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="mt-4 mb-3">{{ aula.titulo | default:"Faltando Título"}}</h1>
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ aula.youtube_id }}"></iframe>
+			</div>
 		</div>
 	</div>
-</div>
 {% endblock body %}
