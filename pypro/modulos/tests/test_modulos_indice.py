@@ -34,12 +34,14 @@ def test_titulo(resp, modulos: List[Modulo]):
         assert_contains(resp, modulo.titulo)
 
 
-def test_descricao(resp, modulo: Modulo):
-    assert_contains(resp, modulo.descricao)
+def test_descricao(resp, modulos: List[Modulo]):
+    for modulo in modulos:
+        assert_contains(resp, modulo.descricao)
 
 
-def test_publico(resp, modulo: Modulo):
-    assert_contains(resp, modulo.publico)
+def test_publico(resp, modulos: List[Modulo]):
+    for modulo in modulos:
+        assert_contains(resp, modulo.publico)
 
 
 def test_aulas_titulo(resp, aulas: List[Aula]):
