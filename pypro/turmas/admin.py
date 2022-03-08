@@ -11,6 +11,7 @@ class MatriculaInline(admin.StackedInline):
     autocomplete_fields = ('usuario',)
     ordering = ('-data',)
 
+
 @admin.register(Turma)
 class TurmaAdmin(admin.ModelAdmin):
     inlines = [MatriculaInline]
